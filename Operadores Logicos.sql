@@ -29,8 +29,8 @@ SELECT * FROM Turno WHERE fechaTurno BETWEEN '20200302' AND '20200305 00:00:00'
 SELECT * FROM Turno WHERE estado BETWEEN 1 AND 2	 
 
 --COMBINANDO OPERADORES LOGICOS 
-SELECT * FROM Paciente WHERE apellido ='Mijangos' AND nombre ='Liesel' OR idPaciente = 7 
-
-
+SELECT * FROM Paciente WHERE apellido ='Mijangos' AND (nombre ='Liesel' OR idPaciente = 7 OR idPais ='PER')
+SELECT * FROM Paciente WHERE apellido ='Mijangos' AND nombre ='Liesel' OR idPaciente = 7 OR idPais ='PER'
+and idPaciente IN(6,3)	
 
 
