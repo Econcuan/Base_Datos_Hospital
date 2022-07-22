@@ -1,5 +1,9 @@
  --COMANDOS 
 
+ EXEC S_paciente 5
+
+
+
  --Select
 SELECT * FROM Paciente
 
