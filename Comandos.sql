@@ -1,6 +1,6 @@
  --COMANDOS 
 
- EXEC S_paciente 5
+	 EXEC S_paciente 5
 
 
 
