@@ -1,9 +1,9 @@
 
-select * from Paciente
+--SELECT * FROM Paciente
 
-exec ALTA_Paciente '36261585','Wilmer','Gomez','20180518','Calle 1','PER','','Wilmer.gomez1997@gmail.com',''
+--exec ALTA_PACIENTE '36261585','Wilmer','Gomez','20180518','Calle 1','PER','','Wilmer.gomez1997@gmail.com',''
 
-alter proc ALTA_Paciente(
+ALTER PROC ALTA_PACIENTE(
 		  @dpi varchar(20),
 		  @nombre varchar(50),
 		  @apellido varchar(50),
@@ -12,7 +12,7 @@ alter proc ALTA_Paciente(
 		  @idPais char(3),
 		  @telefono varchar(20),
 		  @email varchar(30)='',
-		  @observacion varchar(1000)=''
+		  @observacion observacion
 		  )
 as
 
