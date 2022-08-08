@@ -3,7 +3,7 @@ select * from Medico
 select * from MedicoEspecialidad
 */
 
-EXEC 
+EXEC ALTA_Medico 'Gerardo','Martinez',1,'Medico residente'
 
 alter proc ALTA_Medico( 
 			@nombre varchar(50),

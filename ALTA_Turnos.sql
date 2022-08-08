@@ -2,9 +2,10 @@
 select * from Turno
 select * from TurnoPaciente
 select * from Paciente
+select * from medico
 */
 
-EXEC ALTA_Turno '20190215 08:15',
+EXEC ALTA_Turno '20190218 09:15',2,1,'Nada'
 
 alter proc ALTA_Turno( 
 			@fecha char(14), --20190215 12:00
@@ -19,6 +20,7 @@ ESTADO = 0 (pendiente)
 ESTADO = 1 (realizado)
 ESTADO = 2 (cancelado)
 */
+set nocount on
 
 IF NOT EXISTS(SELECT TOP 1 idTurno FROM Turno WHERE fechaTurno=@fecha)
 BEGIN 
@@ -37,7 +39,7 @@ BEGIN
 END 
 ELSE
 BEGIN
-	print 'El cliente ya existe'
+	print 'El turno ya existe'
 	return
 END
 
