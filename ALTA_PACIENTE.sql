@@ -1,7 +1,9 @@
 
 --SELECT * FROM Paciente
 
---exec ALTA_PACIENTE '36261585','Wilmer','Gomez','20180518','Calle 1','PER','','Wilmer.gomez1997@gmail.com',''
+
+
+--exec ALTA_PACIENTE '362615465','Carlos','Lopez','20190515','Calle 3','PER','','Wilmer.gomez1997@gmail.com',''
 
 ALTER PROC ALTA_PACIENTE(
 		  @dpi varchar(20),

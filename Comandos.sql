@@ -1,4 +1,4 @@
- --COMANDOS 
+	 --COMANDOS 
 
 EXEC S_paciente 5
 
@@ -8,10 +8,10 @@ EXEC S_paciente 5
 SELECT * FROM Paciente
 
 --Insertar datos en tabla paciente.
-INSERT INTO Paciente Values('Liesel','Mijangos','1998-08-17','Villa Nueva ','ESP','','','')
+INSERT INTO Paciente Values('Carlos','Mijangos','1999-04-22','Villa Nueva ','ESP','','','')
 
 SELECT * FROM Turno
-insert into Turno values('20190101 12:00',1,'Obs')
+insert into Turno values('20120115',2,'Obs')
 
 --Insertar datos indicando los datos que se insertaran en la tabla. 
 INSERT INTO Paciente (nombre,apellido,fNacimiento,domicilio,idPais,telefono,email,observacion) 
