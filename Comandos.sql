@@ -8,8 +8,58 @@ Print LEFT(@Var1,2)
 
 --FUncion RIGHT
 Declare @var2 varchar(20)
-	set @var2 = 'Ramiro'
+	set @var2 = 'Gonzales'
 Print RIGHT(@Var2,2)
+
+--Funcion LEN sirve para contar la cantidad de caracteres que posee una variable tipo varchar o char
+Declare @var1 varchar(20)
+Declare @var2 varchar(20)
+	set @var1 = 'Ramiro'
+	set @var2 = 'Gonzales'
+Print LEFT(@var1,LEN(@var1)-1)-- +  LEFT(@var2,1)
+
+--Funciones LOWER sirve para cambiar todo a minisculas Y UPPER cambia todo a mayusculas
+Declare @var1 varchar(20)
+Declare @var2 varchar(20)
+	set @var1 = 'RAMIRO'
+	set @var2 = 'GONZALES'
+print UPPER(LEFT(@var1,1)) + LOWER(RIGHT(@var1,LEN(@var1)-1)) + ' ' + UPPER(LEFT(@var2,1)) + LOWER(RIGHT(@var2,LEN(@var2)-1))
+
+--FUncion REPLACE permite cambiar un caracter por otro en variables o campos de una tabla
+
+Declare @var1 varchar(20)
+Declare @var2 varchar(20)
+	set @var1 = 'Ramir"o'
+	set @var2 = 'Gonz@ales'
+SELECT REPLACE(@var1,'"','')
+SELECT REPLACE(@var2,'@','')
+
+--FUncion REPLICATE nos permite repetir un caracter o una cadena.
+
+Declare @var1 varchar(20)
+Declare @var2 varchar(20)
+	set @var1 = 'Ramir"o'
+	set @var2 = 'Gonz@ales'
+select @var1 + @var2 
+
+print REPLICATE('0',5)
+
+--Funciones LTRIM Y RTRIM Permiten eliminar los espacios en una cadena de caracteres
+
+Declare @var1 varchar(20)
+Declare @var2 varchar(20)
+	set @var1 = 'Ramir        '
+	set @var2 = 'Gonz@ales       '
+select LTRIM(RTRIM(@var1)) + ' ' + LTRIM(RTRIM(@var2)) + '*'
+
+--Funcion CONCAT nos permite concatenar valores
+
+Declare @var1 varchar(20)
+Declare @var2 varchar(20)
+	set @var1 = 'Ramiro'
+	set @var2 = 'Gonzales'
+select CONCAT(LTRIM(RTRIM(@var1)),' ',LTRIM(RTRIM(@var2)))
+
 
 EXEC S_paciente 5
 
