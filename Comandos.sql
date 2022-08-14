@@ -60,6 +60,40 @@ Declare @var2 varchar(20)
 	set @var2 = 'Gonzales'
 select CONCAT(LTRIM(RTRIM(@var1)),' ',LTRIM(RTRIM(@var2)))
 
+--Funciones	GETDATE GETUTCDATE sirver para verificar la hora de creación o la hora del servidor		
+select GETDATE()
+select GETUTCDATE()
+
+--Funcion DATEADD Sirve para agregar a una fecha intervalos. 
+
+select DATEADD(DAY,2,GETDATE())
+
+--Funcion DATEDIFF -devuelve la diferencia entre dos fechas 
+
+select DATEDIFF(MONTH,GETDATE(),'20170120')
+
+--Funcion DATEPART Permite obtener un intervalo especifico de una fecha
+select DATEPART(DAY,GETDATE())
+
+--Funcion ISDATE Permite evaluar si una fecha especifica tiene el formato correcto o no.
+print ISDATE(getdate())
+
+if ISDATE('20191331') =1 
+	print'es una fecha'
+else
+ print 'fecha incorrecta'
+
+--Funcion CAST sirve convertir un tipo de dato a otro  y CONVERT convierte datos con mas detalles
+declare @numero money
+set @numero = 500.40
+--select CAST(idPaciente as money) from Paciente
+--select CAST(@numero as INT) as numero
+
+SELECT CONVERT(INT, @numero)
+
+
+
+
 
 EXEC S_paciente 5
 
